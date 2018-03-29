@@ -37,7 +37,7 @@ $(document).ready(function() {
     console.log(game.history);
   });
 
-  $('#submit_button').one('click', function() {
+  $('#submit_button').on('click', function() {
     game.submitData($('#input_number').val());
     game.resultGame();
     $('#result').text(game.resultGame());
