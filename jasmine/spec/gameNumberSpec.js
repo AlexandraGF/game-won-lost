@@ -14,5 +14,16 @@ describe('GameNumber', function (){
       expect(game.history).toEqual([1]);
     });
 
+    it('must choose all options from screen (1-6) in any order', function() {
+      game = new GameNumber();
+      game.submitData(12);
+      game.clickOption(1);
+      game.clickOption(3);
+      game.clickOption(5);
+      game.clickOption(2);
+      game.clickOption(4);
+      expect(game.error).toEqual("You must click on all the options from 1-6");
+    });
+
   });
 });
