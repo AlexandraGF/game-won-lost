@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   $('#button1').one('click', function() {
     game.clickOption(1);
-    $("#clicked1").attr('src', 'https://temporarytattoos.com/pub/media/catalog/product/cache/image/700x560/e9c3970ab036de70892d86c6d221abfe/n/u/number-1-temporary-tattoo_5035.jpg');
+    $('#clicked1').attr('src', 'https://temporarytattoos.com/pub/media/catalog/product/cache/image/700x560/e9c3970ab036de70892d86c6d221abfe/n/u/number-1-temporary-tattoo_5035.jpg');
     console.log(game.history);
   });
 
@@ -35,6 +35,13 @@ $(document).ready(function() {
     game.clickOption(6);
     $('#clicked6').attr('src', 'http://www.wilko.com/content/ebiz/wilkinsonplus/invt/0344545/0344545_l.jpg');
     console.log(game.history);
+  });
+
+  $('#submit_button').one('click', function() {
+    game.submitData($('#input_number').val());
+    game.resultGame();
+    $('#result').text(game.resultGame());
+    console.log(game.resultGame());
   });
 
 });
