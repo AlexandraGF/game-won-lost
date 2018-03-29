@@ -25,5 +25,17 @@ describe('GameNumber', function (){
       expect(game.error).toEqual("You must click on all the options from 1-6");
     });
 
+    it('can see the result when clicks on submit button', function() {
+      game = new GameNumber();
+      game.submitData(12);
+      game.clickOption(1);
+      game.clickOption(3);
+      game.clickOption(5);
+      game.clickOption(2);
+      game.clickOption(4);
+      game.clickOption(6);
+      expect(game.resultGame()).toEqual("You won!");
+    });
+
   });
 });

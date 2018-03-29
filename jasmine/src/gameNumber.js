@@ -14,3 +14,12 @@ GameNumber.prototype.submitData = function (number) {
 GameNumber.prototype.clickOption = function (number) {
   this.history.push(number);
 };
+
+GameNumber.prototype.resultGame = function () {
+  if ((this.inputNumber / 10).toFixed(0) == this.history[0]) {
+    return "You won!";
+  }
+  else {
+    return "You lost!";
+  }
+};
