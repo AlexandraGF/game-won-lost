@@ -12,5 +12,5 @@
 
 ## Screenshots from the web app
 
-![alt tag]('public/page1.png')
-![alt tag]('public/page2.png')
+![alt tag](public/page1.png)
+![alt tag](public/page2.png)
